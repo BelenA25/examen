@@ -6,4 +6,9 @@ describe("Monedas", () => {
     monedas.cambiar()
     expect(monedas.cambio).toEqual(5);
   });
+  it("deberia retornar dos valores de 5 para 10", () => {
+    let monedas = new Monedas(7);
+    monedas.cambiar()
+    expect(monedas.cambio).toEqual([5,2]);
+  });
 });
