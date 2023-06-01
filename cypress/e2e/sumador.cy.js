@@ -10,4 +10,10 @@ describe("Ejercicio 1", () => {
     cy.get("#efectivo").type(50);
     cy.get("#resultado-div").should("contain",25);
   });
+  it("Deberia mostrar mensaje solicitando llenar los campos cuando estos estan vacios", () => {
+    cy.visit("/");
+    cy.get("#monto-venta").type();
+    cy.get("#efectivo").type(50);
+    cy.get("#resultado-div").should("contain", "Llene los campos que estan vacios");
+  });
 });
