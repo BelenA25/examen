@@ -1,9 +1,7 @@
-describe("Sumador", () => {
-  it("Shows the amount of the addition to the user", () => {
+describe("Ejercicio 1", () => {
+  it("Deberia mostrar los campos de monto venta y efectivo", () => {
     cy.visit("/");
-    cy.get("#primer-numero").type(4);
-    cy.get("#segundo-numero").type(5);
-    cy.get("#sumar-button").click();
-    cy.get("#resultado-div").should("contain", "9");
+    cy.get("label").should("contain", "Monto venta:");
+    cy.get("label").should("contain", "Efectivo:");
   });
 });
